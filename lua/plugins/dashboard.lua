@@ -1,21 +1,21 @@
+local function new_file_with_name()
+  local filename = vim.fn.input "Enter new file name: "
+  if filename ~= "" then
+    if vim.fn.filereadable(filename) == 1 then
+      print "Error: File already exists."
+    else
+      vim.cmd("edit " .. filename)
+    end
+  else
+    print "No file name was entered."
+  end
+end
+
 return {
   "nvimdev/dashboard-nvim",
   event = "VimEnter",
   dependencies = { "nvim-tree/nvim-web-devicons" },
   config = function()
-    local function new_file_with_name()
-      local filename = vim.fn.input "Enter new file name: "
-      if filename ~= "" then
-        if vim.fn.filereadable(filename) == 1 then
-          print "Error: File already exists."
-        else
-          vim.cmd("edit " .. filename)
-        end
-      else
-        print "No file name was entered."
-      end
-    end
-
     require("dashboard").setup {
       theme = "hyper",
       config = {
@@ -46,6 +46,13 @@ return {
             group = "Constant",
             action = function() new_file_with_name() end,
             key = "n",
+          },
+          {
+            desc = "Lazy",
+            icon = "󰒲 ",
+            group = "Application",
+            action = "Lazy",
+            key = "l",
           },
           {
             desc = "Quit",
