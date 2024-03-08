@@ -31,5 +31,23 @@ return {
         },
       },
     },
+
+    autocmds = {
+      -- Autocommand group for changing colorscheme based on filetype
+      java_colorscheme = {
+        {
+          event = "User",
+          pattern = "AstroFile",
+          desc = "Change colorscheme to tokyonight-moon for Java files",
+          callback = function()
+            -- Check if the opened file is a Java file
+            if vim.bo.filetype == "java" then
+              -- Change the colorscheme to tokyonight-moon
+              vim.cmd "colorscheme tokyonight-moon"
+            end
+          end,
+        },
+      },
+    },
   },
 }
