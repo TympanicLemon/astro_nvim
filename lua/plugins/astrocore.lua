@@ -4,7 +4,7 @@ return {
   ---@type AstroCoreOpts
   opts = {
     options = {
-      opt = { -- vim.opt.<key>
+      opt = {
         backup = false,
         colorcolumn = "120",
         formatoptions = "jn",
