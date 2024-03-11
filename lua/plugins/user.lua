@@ -1,5 +1,10 @@
 ---@type LazySpec
 return {
+  -- disabled pluguns
+  { "lukas-reineke/indent-blankline.nvim", enabled = false },
+  { "windwp/nvim-autopairs", enabled = false },
+
+  -- my plugins
   { "folke/tokyonight.nvim" },
 
   {
