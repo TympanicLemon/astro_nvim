@@ -1,7 +1,6 @@
 ---@type LazySpec
 return {
   -- [[ disabled plugins ]]
-  { "lukas-reineke/indent-blankline.nvim", enabled = false },
   { "windwp/nvim-autopairs", enabled = false },
 
   -- Lua lsp and formatting
