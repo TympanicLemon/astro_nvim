@@ -1,8 +1,39 @@
 ---@type LazySpec
 return {
-  -- [[ disabled pluguns ]]
+  -- [[ disabled plugins ]]
   { "lukas-reineke/indent-blankline.nvim", enabled = false },
   { "windwp/nvim-autopairs", enabled = false },
+
+  -- Lua lsp and formatting
+  {
+    "williamboman/mason-lspconfig.nvim",
+    opts = function(_, opts)
+      opts.ensure_installed = require("astrocore").list_insert_unique(opts.ensure_installed, {
+        "lua_ls",
+      })
+    end,
+  },
+
+  {
+    "jay-babu/mason-null-ls.nvim",
+    opts = function(_, opts)
+      opts.ensure_installed = require("astrocore").list_insert_unique(opts.ensure_installed, {
+        "stylua",
+      })
+    end,
+  },
+
+  {
+    "nvimtools/none-ls.nvim",
+    opts = function(_, config)
+      local null_ls = require "null-ls"
+
+      config.sources = {
+        null_ls.builtins.formatting.stylua,
+      }
+      return config
+    end,
+  },
 
   -- [[ plugins ]]
   { "folke/tokyonight.nvim" },
