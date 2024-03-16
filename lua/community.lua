@@ -6,5 +6,4 @@ return {
   { import = "astrocommunity.pack.html-css" },
   { import = "astrocommunity.pack.typescript" },
   { import = "astrocommunity.diagnostics.trouble-nvim" },
-  { import = "astrocommunity.project.nvim-spectre" },
 }
