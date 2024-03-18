@@ -29,7 +29,7 @@ return {
     opts.section.buttons.val = {
       opts.button("n", " New File", function() new_file_with_name() end),
       opts.button("f", " Find File", ":Telescope find_files<CR>"),
-      opts.button("o", "󱋡 Old Files", ":Telescope oldfiles<CR>"),
+      opts.button("r", "󱋡 Recent Files", ":Telescope oldfiles<CR>"),
       opts.button("g", " Live Grep", ":Telescope live_grep<CR>"),
       opts.button("l", "󰒲 Lazy ", ":Lazy<CR>"),
     }
