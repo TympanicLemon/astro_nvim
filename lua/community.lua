@@ -5,6 +5,7 @@ return {
   { import = "astrocommunity.pack.astro" },
   { import = "astrocommunity.pack.html-css" },
   { import = "astrocommunity.pack.python" },
+  { import = "astrocommunity.pack.rust" },
   { import = "astrocommunity.pack.typescript" },
   { import = "astrocommunity.diagnostics.trouble-nvim" },
 }
