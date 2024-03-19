@@ -5,6 +5,7 @@ return {
 
   -- [[ plugins ]]
   { "folke/tokyonight.nvim" },
+  { "olivercederborg/poimandres.nvim", opts = {} },
 
   {
     "mbbill/undotree",
