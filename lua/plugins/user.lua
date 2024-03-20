@@ -4,7 +4,6 @@ return {
   { "windwp/nvim-autopairs", enabled = false },
 
   -- [[ plugins ]]
-  { "folke/tokyonight.nvim" },
   { "olivercederborg/poimandres.nvim", opts = {} },
 
   {
