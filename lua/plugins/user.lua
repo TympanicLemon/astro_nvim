@@ -7,12 +7,6 @@ return {
   { "olivercederborg/poimandres.nvim", opts = {} },
 
   {
-    "iamcco/markdown-preview.nvim",
-    build = "cd app && npm install",
-    ft = "markdown",
-  },
-
-  {
     "mbbill/undotree",
     config = function()
       vim.g.undotree_SplitWidth = 40
